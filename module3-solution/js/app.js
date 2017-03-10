@@ -27,11 +27,9 @@
     //Implementaion for Filtering Items based on searchTerm
     menu.getMatchedMenuItems = function () {
       menu.found = [];
-      menu.loading = true;
       if (menu.searchTerm) {
         var promise = MenuSearchService.getMatchedMenuItems(menu.searchTerm);
         promise.then(function (response) {
-          menu.loading = false;
           menu.found = response;
         })
         .catch(function (error) {
