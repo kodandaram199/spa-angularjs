@@ -4,13 +4,14 @@
   <meta charser="utf-8">
     <title>Narrow Down Your Menu Choice</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script src="js/app.js"></script>
+    <style>
+      .emptyMessage{color:red}
+    </style>
 </head>
 <body>
   <div class="container" ng-controller='NarrowItDownController as searchController'>
@@ -24,12 +25,11 @@
       </div>
     </div>
 
-    <!-- Bonus loader (see Bonus section of the assignment) -->
-    <items-loader-indicator></items-loader-indicator>
+    <div ng-if="searchController.loading"><i class="fa fa-spinner" aria-hidden="true"></i></div>
 
     <!-- found-items should be implemented as a component -->
     <div ng-if="searchController.found.length == 0" class="emptyMessage">Nothing found.</div>
-    <div ng-if="searchController.found.length != 0" class="tableView">
+    <div ng-if="searchController.found.length != 0"
       <found-items items="searchController.found" on-remove="searchController.removeItem(index)"></found-items>
     </div>
   </div>
