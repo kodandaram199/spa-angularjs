@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+<head>
+  <title>Multi Cuisine  Restaurant</title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="js/angular.min.js"></script>
+
+    <!-- Libraries -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menu/menuapp.module.js"></script>
+    <script src="src/menu/data.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+
+    <!-- MenuApp module artifacts -->
+    <script src="src/menu/categories.component.js"></script>
+    <script src="src/menu/categories.controller.js"></script>
+    <script src="src/menu/items.component.js"></script>
+    <script src="src/menu/items.controller.js"></script>
+
+    <!-- Data module artifacts -->
+    <script src="src/menu/menudata.service.js"></script>
+  </head>
+  <body>
+    <ui-view></ui-view>
+  </body>
+  </html>
