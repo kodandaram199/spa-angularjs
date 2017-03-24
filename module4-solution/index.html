@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en" ng-app="MenuApp">
 <head>
-  <title>Chinese Restaurant</title>
+  <title>Pdr Multi Cuisine Restaurant Menu</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Libraries -->
@@ -12,21 +12,20 @@
     <script src="js/angular-ui-router.min.js"></script>
 
     <!-- Modules -->
-    <script src="src/menu/menuapp.module.js"></script>
-    <script src="src/menu/data.module.js"></script>
+    <script src="src/menuapp.module.js"></script>
     <script src="src/spinner/spinner.module.js"></script>
 
     <!-- Routes -->
-    <script src="src/routes.js"></script>
+    <script src="src/app/routes/routes.js"></script>
 
     <!-- MenuApp module artifacts -->
-    <script src="src/menu/categories.component.js"></script>
-    <script src="src/menu/categories.controller.js"></script>
-    <script src="src/menu/items.component.js"></script>
-    <script src="src/menu/items.controller.js"></script>
+    <script src="src/app/components/categories.component.js"></script>
+    <script src="src/app/controllers/categories.controller.js"></script>
+    <script src="src/app/components/items.component.js"></script>
+    <script src="src/app/controllers/items.controller.js"></script>
 
     <!-- Data module artifacts -->
-    <script src="src/menu/menudata.service.js"></script>
+    <script src="src/app/services/menudata.service.js"></script>
 
     <!-- 'Spinner' module artifacts -->
     <script src="src/spinner/loadingspinner.component.js"></script>
